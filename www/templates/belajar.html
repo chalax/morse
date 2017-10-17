@@ -1,5 +1,5 @@
 <ion-view view-title="Belajar Morse">
-  <ion-content>
+  <ion-content padding="true">
     <h2>Belajar Alfabet Ke Morse</h2>
     <div class="list">
       <label class="item item-input">
@@ -18,27 +18,24 @@
       <label class="item item-input">
         <input disabled type="text" ng-model="inputMorse.text" placeholder="Tekan Tombol Untuk Input Morse">
       </label>
-      <label class="item item-input">
-        <button ng-click="inputDot()" class="button button-assertive ">. (DOT)</button>
-      </label>
-        <label class="item item-input">
-          <button ng-click="inputDash()"  class="button button-assertive">- (Dash)</button>
-        </label>
-        <label class="item item-input">
-          <button ng-click="inputLetterSeparator()" class="button button-assertive">_ (Spasi/Pemisah Huruf)</button>
-        </label>
-        <label class="item item-input">
-          <button ng-click="inputWordSeparator()" class="button button-assertive">/ (Pemisah Kata)</button>
-        </label>
-        <label class="item item-input">
-          <button ng-click="clear()" class="button button-assertive"> Clear</button>
+
+        <div class="button-bar">
+          <button ng-click="inputDot()" class="button button-positive ">.</button>
+          <button ng-click="inputDash()"  class="button button-calm">-</button>
+          <button ng-click="inputLetterSeparator()" class="button button-balanced">_</button>
+          <button ng-click="inputWordSeparator()" class="button button-energized">/</button>
+        </div>
+
+
+        <label class="item">
+          <button ng-click="clear()" class="button button-assertive button-outline button-block"> Clear</button>
         </label>
 
       <label class="item item-input">
         {{outputmorse}}
       </label>
-      <label class="item item-input">
-          <button ng-click="translateToMorseToText(inputMorse)" class="button button-assertive">to text</button>
+      <label class="item ">
+          <button ng-click="translateToMorseToText(inputMorse)" class="button button-assertive button-block">To Text</button>
       </label>
     </div>
   </ion-content>

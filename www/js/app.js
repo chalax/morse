@@ -86,12 +86,21 @@ angular.module('starter', ['ionic', 'starter.controllers','ngCordova'])
           }
         }
       })
-    .state('app.alat.kompas', {
+    .state('app.kompas', {
       url: '/kompas',
       views: {
         'menuContent': {
           templateUrl: 'templates/kompas.html',
           controller: 'kompasCtrl'
+        }
+      }
+    })
+    .state('app.senter', {
+      url: '/senter',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/senter.html',
+          controller: 'senterCtrl'
         }
       }
     });

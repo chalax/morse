@@ -216,6 +216,17 @@ angular.module('starter.controllers', [])
 })
 .controller('kompasCtrl',function($scope){
   console.log("kompas Ctrl Init");
+})
+.controller('senterCtrl',function($scope,$cordovaFlashlight){
+  console.log("senter Ctrl Init");
+    $scope.FlashON =function(){
+      $cordovaFlashlight.switchOn();
+    }
+
+    $scope.FlashOff =function(){
+      $cordovaFlashlight.switchOff();
+    }
+
 });
 
 
